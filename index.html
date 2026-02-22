@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GesLyCo-X — Télécharger l'installation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 48px;
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-size: 2.8em;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #667eea, #a78bfa, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+
+        .version-badge {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.2);
+            border: 1px solid rgba(102, 126, 234, 0.4);
+            color: #a78bfa;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .feature-item .icon {
+            font-size: 1.2em;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 18px 40px;
+            border-radius: 14px;
+            font-size: 1.15em;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(102, 126, 234, 0.6);
+        }
+
+        .download-btn:active {
+            transform: translateY(0);
+        }
+
+        .download-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        .info {
+            margin-top: 20px;
+            font-size: 0.85em;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .info a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: underline;
+        }
+
+        .steps {
+            text-align: left;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .steps h3 {
+            font-size: 0.95em;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.92em;
+            line-height: 1.5;
+        }
+
+        .step-number {
+            background: rgba(102, 126, 234, 0.25);
+            color: #a78bfa;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.8em;
+            flex-shrink: 0;
+        }
+
+        footer {
+            margin-top: 40px;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.8em;
+        }
+
+        @media (max-width: 500px) {
+            h1 { font-size: 2em; }
+            .features { grid-template-columns: 1fr; }
+            .card { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-icon">📊</div>
+
+        <h1>GesLyCo-X</h1>
+        <p class="subtitle">Logiciel de gestion pour lycées et collèges.<br>Téléchargez et installez en un clic.</p>
+
+        <div class="card">
+            <span class="version-badge">✨ Dernière version</span>
+
+            <div class="features">
+                <div class="feature-item">
+                    <span class="icon">📋</span>
+                    <span>Gestion des élèves</span>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">💰</span>
+                    <span>Comptabilité</span>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">📊</span>
+                    <span>Bulletins & Notes</span>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">🔒</span>
+                    <span>Sécurité des données</span>
+                </div>
+            </div>
+
+            <a href="Install_Serveur.exe" class="download-btn" download>
+                <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                Télécharger l'installation
+            </a>
+
+            <div class="steps">
+                <h3>📝 Instructions d'installation</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <span>Cliquez sur le bouton ci-dessus pour télécharger le fichier d'installation.</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <span>Exécutez le fichier <strong>Install_Serveur.exe</strong> téléchargé.</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <span>Suivez les étapes de l'assistant d'installation.</span>
+                </div>
+            </div>
+        </div>
+
+        <p class="info">
+            Windows 7/8/10/11 • Connexion internet requise pour l'installation
+        </p>
+
+        <footer>
+            &copy; 2026 GesLyCo-X — Tous droits réservés
+        </footer>
+    </div>
+</body>
+</html>
