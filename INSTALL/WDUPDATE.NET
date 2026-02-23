@@ -1,0 +1,21 @@
+[GesLyCo-X]
+PROTOCOLE=HTTP
+RESEAU=1
+CHEMIN=C:\Test\INSTALL
+VERSION=1.0.1.0
+DERNIERE_VERSION=1.0.1.0
+DELAI=5
+MSG_INTERDIT=Cette application a été verrouillée par son administrateur pour une mise à jour et n'est pas disponible pour le moment.
+MSG_AVERTISSEMENT=Cette application va être interrompue pour une mise à jour. Veuillez sauver toutes vos modifications et quitter l'application.
+MSG_ARRET=ATTENTION : Arrêt de l'application pour mise à jour.
+DELAI_AUTO=60
+VALIDE_AUTO=2
+REP_ETATU=<RepRef>\Etats et Requêtes Partagés
+WDVERSION=10
+VERSIONWDSETUP=25.0.143.0
+DELAICHECKVERSION=0
+SILENTCHECKVERSION=0
+MODE=0
+[WDSETUP]
+MODE=-1
+DELAI=1
