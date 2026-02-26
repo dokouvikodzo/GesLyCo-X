@@ -2,7 +2,7 @@
 PROTOCOLE=HTTP
 RESEAU=1
 CHEMIN=C:\Users\dokou\OneDrive\Documents\GitHub\GesLyCo-X\INSTALL
-VERSION=1.0.7.0
+VERSION=1.0.1.0
 DERNIERE_VERSION=1.0.1.0
 DELAI=5
 MSG_INTERDIT=Cette application a été verrouillée par son administrateur pour une mise à jour et n'est pas disponible pour le moment.
@@ -14,7 +14,7 @@ REP_ETATU=<RepRef>\Etats et Requêtes Partagés
 WDVERSION=10
 VERSIONWDSETUP=25.0.143.0
 DELAICHECKVERSION=0
-SILENTCHECKVERSION=0
+SILENTCHECKVERSION=1
 MODE=0
 [WDSETUP]
 MODE=-1
